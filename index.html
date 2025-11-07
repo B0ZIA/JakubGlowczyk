@@ -1,281 +1,449 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Portfolio – Jakub Głowczyk</title>
+<title data-i18n="title">Portfolio – Jakub Głowczyk</title>
+
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet"/>
 <!-- Styles -->
 <link href="style.css" rel="stylesheet">
-</link></head>
+</head>
 <body id="top">
 <!-- ===== NAV ===== -->
 <nav class="nav">
-<div class="wrap">
-<a class="brand" href="#home">Jakub Głowczyk</a>
-<button aria-label="Menu" class="nav-toggle">
-<span></span><span></span><span></span>
-</button>
-<ul class="menu">
-<li><a href="#skills">Umiejętności</a></li>
-<li><a href="#projects-pro">Projekty zawodowe</a></li>
-<li><a href="#projects-own">Projekty własne</a></li>
-<li><a href="#contact">Kontakt</a></li>
-</ul>
-</div>
+  <div class="wrap">
+    <a class="brand" href="#home">Jakub Głowczyk</a>
+    <div class="nav-right">
+      <ul class="menu">
+        <li><a href="#skills" data-i18n="nav.skills">Umiejętności</a></li>
+        <li><a href="#projects-pro" data-i18n="nav.pro">Projekty zawodowe</a></li>
+        <li><a href="#projects-own" data-i18n="nav.own">Projekty własne</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <!-- New segmented language switcher -->
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button id="lang-pl" class="lang-btn is-active" data-lang="pl" aria-pressed="true">PL</button>
+        <button id="lang-en" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <span class="lang-pill" aria-hidden="true"></span>
+      </div>
+
+      <button aria-label="Menu" class="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 </nav>
+
 <!-- ===== HERO ===== -->
 <header class="hero" id="home">
-<div class="wrap hero-grid">
-<div class="hero-text">
-<h1 class="heading-xl">Jakub Głowczyk</h1>
-<h2 class="subheading">Game Developer</h2>
-<p>Cześć, jestem Kuba — specjalizuję się w programowaniu gier i narzędzi w Unity, wykorzystując C# od ponad 5 lat. 
-Brałem udział w trzech projektach komercyjnych oraz licznych projektach własnych i zespołowych, skupiając się na 
-architekturze kodu, optymalizacji i tworzeniu rozwiązań gameplayowych.</p>
-<div class="hero-cta">
-<a class="btn btn-primary" href="assets/CV.pdf" target="_blank"><i class="fa fa-file-text-o"></i> Otwórz CV</a>
-<a class="btn btn-ghost" href="#projects"><i class="fa fa-play-circle-o"></i> Zobacz projekty</a>
-</div>
-</div>
-<div class="hero-photo">
-<img alt="Zdjęcie Jakuba" src="assets/img/portret.png"/>
-</div>
-</div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="heading-xl">Jakub Głowczyk</h1>
+      <h2 class="subheading" data-i18n="hero.subtitle">Game Developer</h2>
+      <p data-i18n="hero.intro">
+        Cześć, jestem Kuba — specjalizuję się w programowaniu gier i narzędzi w Unity, wykorzystując C# od ponad 5 lat. 
+        Brałem udział w trzech projektach komercyjnych oraz licznych projektach własnych i zespołowych, skupiając się na 
+        architekturze kodu, optymalizacji i tworzeniu rozwiązań gameplayowych.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="assets/CV.pdf" target="_blank"><i class="fa fa-file-text-o"></i> <span data-i18n="hero.cv">Otwórz CV</span></a>
+        <a class="btn btn-ghost" href="#projects"><i class="fa fa-play-circle-o"></i> <span data-i18n="hero.projects">Zobacz projekty</span></a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img alt="Zdjęcie Jakuba" src="assets/img/portret.png"/>
+    </div>
+  </div>
 </header>
+
 <!-- ===== SKILLS ===== -->
 <section class="section" id="skills">
-<div class="wrap">
-<header class="section-head" id="skills">
-<h2 class="heading-lg">Umiejętności</h2>
-<p class="legend">
-          <span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> Podstawy
-		  &nbsp;&nbsp;
-          <span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> Praktyka 
-		  &nbsp;&nbsp;
-          <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> Zaawansowany 
-        </p>
-</header>
-<div class="skills-grid">
-<!-- Unity (pills, bez poziomu) -->
-  <article class="card card-skill card-big reveal">
-    <h3 class="card-title">
-      <i class="devicon-unity-plain"></i>
-      <span>Unity</span>
-    <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></h3>
-    <div class="pills">
-      <span class="pill"><i class="fa fa-plug"></i> Zenject</span>
-      <span class="pill"><i class="fa fa-exchange"></i> Photon Unity Networking (PUN)</span>
-      <span class="pill"><i class="fa fa-magic"></i> DOTween</span>
-      <span class="pill"><i class="fa fa-leaf"></i> Odin Inspector / Custom Editor</span>
-	  <span class="pill"><i class="fa fa-sitemap"></i> Behavior Designer</span>
-	  <span class="pill"><i class="fa fa-sitemap"></i> A* (Aron Granberg)</span>
-      <span class="pill"><i class="fa fa-wrench"></i> Editor Windows</span>
-	  <span class="pill"><i class="fa fa-area-chart"></i> Profiler</span>
-      <span class="pill"><i class="fa fa-map"></i> NavMesh</span>
-      <span class="pill"><i class="fa fa-arrows-alt"></i> IK / Animation Blend Trees</span>
-      <span class="pill"><i class="fa fa-cubes"></i> Addressables</span>
-	  <span class="pill"><i class="fa fa-map"></i> Hot Reload</span>
+  <div class="wrap">
+    <header class="section-head" id="skills-head">
+      <h2 class="heading-lg" data-i18n="skills.title">Umiejętności</h2>
+      <p class="legend">
+        <span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> <span data-i18n="skills.legend.basic">Podstawy</span>
+        &nbsp;&nbsp;
+        <span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> <span data-i18n="skills.legend.practice">Praktyka</span>
+        &nbsp;&nbsp;
+        <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> <span data-i18n="skills.legend.advanced">Zaawansowany</span>
+      </p>
+    </header>
+
+    <div class="skills-grid">
+      <!-- Unity -->
+      <article class="card card-skill card-big reveal">
+        <h3 class="card-title">
+          <i class="devicon-unity-plain"></i>
+          <span>Unity</span>
+          <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span>
+        </h3>
+        <div class="pills">
+          <span class="pill"><i class="fa fa-plug"></i> Zenject</span>
+          <span class="pill"><i class="fa fa-exchange"></i> Photon Unity Networking (PUN)</span>
+          <span class="pill"><i class="fa fa-magic"></i> DOTween</span>
+          <span class="pill"><i class="fa fa-leaf"></i> Odin Inspector / Custom Editor</span>
+          <span class="pill"><i class="fa fa-sitemap"></i> Behavior Designer</span>
+          <span class="pill"><i class="fa fa-sitemap"></i> A* (Aron Granberg)</span>
+          <span class="pill"><i class="fa fa-wrench"></i> Editor Windows</span>
+          <span class="pill"><i class="fa fa-area-chart"></i> Profiler</span>
+          <span class="pill"><i class="fa fa-map"></i> NavMesh</span>
+          <span class="pill"><i class="fa fa-arrows-alt"></i> IK / Animation Blend Trees</span>
+          <span class="pill"><i class="fa fa-cubes"></i> Addressables</span>
+          <span class="pill"><i class="fa fa-map"></i> Hot Reload</span>
+        </div>
+      </article>
+
+      <!-- C# -->
+      <article class="card card-skill card-big reveal">
+        <h3 class="card-title">
+          <i class="devicon-csharp-plain"></i>
+          <span>C#</span>
+          <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span>
+        </h3>
+        <div class="pills">
+          <span class="pill"><i class="fa fa-sitemap"></i> <span data-i18n="skills.cs.oop">OOP / Abstrakcja</span></span>
+          <span class="pill"><i class="fa fa-balance-scale"></i> SOLID</span>
+          <span class="pill"><i class="fa fa-filter"></i> LINQ</span>
+          <span class="pill"><i class="fa fa-code"></i> <span data-i18n="skills.cs.serialization">Serializacja (JSON)</span></span>
+          <span class="pill"><i class="fa fa-sitemap"></i> <span data-i18n="skills.cs.state">State Machine / Behavior Tree</span></span>
+          <span class="pill"><i class="fa fa-recycle"></i> Object Pooling</span>
+          <span class="pill"><i class="fa fa-th"></i> Quad Tree</span>
+          <span class="pill"><i class="fa fa-map"></i> A*</span>
+          <span class="pill"><i class="fa fa-clock-o"></i> async/await, Task</span>
+        </div>
+      </article>
+
+      <!-- VCS i IDE -->
+      <article class="card card-skill reveal">
+        <h3 class="card-title"><i class="devicon-git-plain"></i> <span data-i18n="skills.vcs.title">VCS i IDE</span></h3>
+        <ul class="skill-list">
+          <li><span><i class="devicon-git-plain"></i> Git / Sourcetree</span><span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-subversion-plain"></i> SVN / TortoiseSVN</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-rider-plain"></i> JetBrains Rider</span><span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-visualstudio-plain"></i> Visual Studio</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+        </ul>
+      </article>
+
+      <!-- Framework -->
+      <article class="card card-skill reveal">
+        <h3 class="card-title"><i class="devicon-dotnetcore-plain"></i> Framework</h3>
+        <ul class="skill-list">
+          <li><span><i class="devicon-godot-plain"></i> Godot</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="fa fa-comments"></i> Discord.Net</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-dotnetcore-plain"></i> ASP .NET MVC</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+        </ul>
+      </article>
+
+      <!-- Technologie -->
+      <article class="card card-skill reveal">
+        <h3 class="card-title"><i class="devicon-html5-plain"></i> <span data-i18n="skills.tech.title">Technologie</span></h3>
+        <ul class="skill-list">
+          <li><span><i class="devicon-godot-plain"></i> GDScript</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-html5-plain"></i> HTML / CSS / CSHTML</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-microsoftsqlserver-plain"></i> SQL</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+          <li><span><i class="devicon-cplusplus-plain"></i> C++</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
+        </ul>
+      </article>
     </div>
-  </article>
-  <!-- C# (pills, bez poziomu) -->
-  <article class="card card-skill card-big reveal">
-    <h3 class="card-title">
-      <i class="devicon-csharp-plain"></i>
-      <span>C#</span>
-    <span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></h3>
-    <div class="pills">
-      <span class="pill"><i class="fa fa-sitemap"></i> OOP / Abstrakcja</span>
-      <span class="pill"><i class="fa fa-balance-scale"></i> SOLID</span>
-      <span class="pill"><i class="fa fa-filter"></i> LINQ</span>
-      <span class="pill"><i class="fa fa-code"></i> Serializacja (JSON)</span>
-      <span class="pill"><i class="fa fa-sitemap"></i> State Machine / Behavior Tree</span>
-      <span class="pill"><i class="fa fa-recycle"></i> Object Pooling</span>
-      <span class="pill"><i class="fa fa-th"></i> Quad Tree</span>
-      <span class="pill"><i class="fa fa-map"></i> A*</span>
-      <span class="pill"><i class="fa fa-clock-o"></i> async/await, Task</span>
-    </div>
-  </article>
-
-  <!-- VCS i IDE -->
-  <article class="card card-skill reveal">
-    <h3 class="card-title"><i class="devicon-git-plain"></i> VCS i IDE</h3>
-    <ul class="skill-list">
-      <li><span><i class="devicon-git-plain"></i> Git / Sourcetree</span><span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-	  <li><span><i class="devicon-subversion-plain"></i> SVN / TortoiseSVN</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="devicon-rider-plain"></i> JetBrains Rider</span><span class="level l3"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="devicon-visualstudio-plain"></i> Visual Studio</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-    </ul>
-  </article>
-
-  <!-- Organizacja -->
-  <!-- <article class="card card-skill reveal"> -->
-    <!-- <h3 class="card-title"><i class="fa fa-users"></i> Organizacja</h3> -->
-    <!-- <ul class="skill-list"> -->
-      <!-- <li><span><i class="fa fa-sliders"></i> Agile</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li> -->
-      <!-- <li><span><i class="fa fa-tasks"></i> hackNPlan</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li> -->
-      <!-- <li><span><i class="fa fa-columns"></i> Trello</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li> -->
-      <!-- <li><span><i class="fa fa-check-square-o"></i> Asana</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li> -->
-    <!-- </ul> -->
-  <!-- </article> -->
-
-  <!-- Framework -->
-  <article class="card card-skill reveal">
-    <h3 class="card-title"><i class="devicon-dotnetcore-plain"></i> Framework</h3>
-    <ul class="skill-list">
-      <li><span><i class="devicon-godot-plain"></i> Godot</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="fa fa-comments"></i> Discord.Net</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-	  <li><span><i class="devicon-dotnetcore-plain"></i> ASP .NET MVC</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-    </ul>
-  </article>
-
-  <!-- Technologie -->
-  <article class="card card-skill reveal">
-    <h3 class="card-title"><i class="devicon-html5-plain"></i> Technologie</h3>
-    <ul class="skill-list">
-	  <li><span><i class="devicon-godot-plain"></i> GDScript</span><span class="level l2"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="devicon-html5-plain"></i> HTML / CSS / CSHTML</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="devicon-microsoftsqlserver-plain"></i> SQL</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-      <li><span><i class="devicon-cplusplus-plain"></i> C++</span><span class="level l1"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></li>
-    </ul>
-  </article>
-</div>
-</div>
+  </div>
 </section>
+
 <!-- ===== PROJECTS ===== -->
 <section class="section section-gray" id="projects">
-<div class="wrap">
-<header class="section-head" id="projects-pro">
-<h2 class="heading-lg">Projekty zawodowe</h2>
-</header>
-<!-- Utility: Use data-img to override height per card if needed -->
-<article class="project-row" data-img="L">
-<div class="project-media">
-<img alt="Infection Free Zone screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1465460/2524d213ff71a6e8af162e7d18a8f35dd2259586/ss_2524d213ff71a6e8af162e7d18a8f35dd2259586.jpg?t=1761735519"/>
-</div>
-<div class="project-info">
-<h3>Infection Free Zone</h3>
-<p class="role">Unity Programmer @ Jutsu Games</p>
-<p>Przejmij dowodzenie nad grupą ocalałych. Wybierz HQ, a następnie przeszukaj i zaadaptuj budynki wokół, by stworzyć samowystarczalną osadę. A gdy przyjdzie noc - broń się przed hordami zainfekowanych! Graj w dowolnym mieście na świecie, używając realnych danych geograficznych!</p><div class="project-actions"><a aria-label="Otwórz Infection Free Zone na Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/1465460/Infection_Free_Zone/" rel="noopener" target="_blank"><i class="fa fa-steam"></i> Otwórz na Steam</a></div>
-</div>
-</article>
-<article class="project-row alt" data-img="L">
-<div class="project-media">
-<img alt="Builder Simulator screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1120320/ss_65b9a498082e31c54a61174810f3121e5327882b.jpg?t=1760606034"/>
-</div>
-<div class="project-info">
-<h3>Builder Simulator</h3>
-<p class="role">Junior Unity Programmer @ Live Motion Games S.A.</p>
-<p>Builder Simulator to idealna gra dla osób, chcących zbudować swój własny dom, cegiełka po cegiełce. Na łatwym poziomie gra poprowadzi Cię krok po kroku i pozwoli ci się nauczyć podstawowych mechanik.</p><div class="project-actions"><a aria-label="Otwórz Builder Simulator na Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/1120320/Builder_Simulator/" rel="noopener" target="_blank"><i class="fa fa-steam"></i> Otwórz na Steam</a></div>
-</div>
-</article>
-<article class="project-row" data-img="L">
-<div class="project-media">
-<img alt="Train Station Renovation screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/914010/ss_968e65f077c94a7082cf1bf5d904ed252fad07d3.jpg?t=1760606809"/>
-</div>
-<div class="project-info">
-<h3>Train Station Renovation</h3>
-<p class="role">Junior Unity Programmer @ Live Motion Games S.A.</p>
-<p>Spróbuj własnymi rękami zrobić renowacje opuszczonych dworców i starych pociągów. Przywróć ich dawną chwałę i spraw, by znów zaczęły działać.</p><div class="project-actions"><a aria-label="Otwórz Train Station Renovation na Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/914010/Train_Station_Renovation/" rel="noopener" target="_blank"><i class="fa fa-steam"></i> Otwórz na Steam</a></div>
-</div>
-</article>
-<header class="section-head mt-36" id="projects-own">
-<h2 class="heading-lg">Projekty własne</h2>
-</header>
-<article class="project-row alt" data-img="L">
-<div class="project-media">
-<img alt="King Defenders screenshot" src="assets/img/portfolio/kd/kd.png"/>
-</div>
-<div class="project-info">
-<h3>King Defenders</h3>
-<p class="role">Unity Multiplayer Developer @ KD Team (PC)</p>
-<p>Asymetryczna rozgrywka: obrońcy vs mutanci. Dwa etapy meczu – przygotowania i walka. Wygrana przez przetrwanie lub eliminację króla.</p>
-</div>
-</article>
-<article class="project-row" data-img="L">
-<div class="project-media">
-<img alt="Till Death Do Us Part screenshot" src="assets/img/portfolio/tddus/tddus.png"/>
-</div>
-<div class="project-info">
-<h3>Till Death Do Us Part</h3>
-<p class="role">Unity Developer @ Yokaihatsu Team (PC)</p>
-<p>Gra jamowa (KrakJam 2024): panna młoda vs teściowa – rywalizacja w rzucie izometrycznym.</p>
-</div>
-</article>
-<article class="project-row alt" data-img="L">
-<div class="project-media">
-<img alt="Urskog screenshot" src="assets/img/portfolio/Urskog/urskog.png"/>
-</div>
-<div class="project-info">
-<h3>Urskog</h3>
-<p class="role">Unity Developer @ Randoms Team (PC)</p>
-<p>Gra jamowa (KrakJam 2023): rozrastanie lasu i równowaga ekosystemu. 10 zakończeń, zmienne poziomy trudności.</p>
-</div>
-</article>
-<article class="project-row" data-img="L">
-<div class="project-media">
-<img alt="Pancerniak screenshot" src="assets/img/portfolio/Pancerniak/tankman_screen_1.png"/>
-</div>
-<div class="project-info">
-<h3>Pancerniak</h3>
-<p class="role">Unity Multiplayer Developer @ Pancerniak Team (PC/Web)</p>
-<p>Wieloletni projekt hobbystyczny – matchmaking, migracja hosta, custom edytory, ScriptableObjects.</p>
-</div>
-</article>
-<article class="project-row alt" data-img="L">
-<div class="project-media">
-<img alt="Asterielle screenshot" src="assets/img/portfolio/Asterielle/update12.jpg"/>
-</div>
-<div class="project-info">
-<h3>Asterielle: Slayer of Dwarves</h3>
-<p class="role">Godot Developer @ Flying Octopus (PC/Web)</p>
-<p>Nauka Godota i GDScript, praca zespołowa i proces review w większym zespole.</p>
-</div>
-</article>
-<article class="project-row" data-img="L">
-<div class="project-media">
-<img alt="Lyngoo screenshot" src="assets/img/portfolio/Lyngoo/scena_2.gif"/>
-</div>
-<div class="project-info">
-<h3>Lyngoo</h3>
-<p class="role">Unity Developer (Android/iOS)</p>
-<p>Gra mobilna na Google Play z autorskim systemem dialogów opartym o okno edytora – łatwa produkcja treści.</p>
-</div>
-</article>
-</div>
+  <div class="wrap">
+    <header class="section-head" id="projects-pro">
+      <h2 class="heading-lg" data-i18n="projects.pro.title">Projekty zawodowe</h2>
+    </header>
+
+    <article class="project-row" data-img="L">
+      <div class="project-media">
+        <img alt="Infection Free Zone screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1465460/2524d213ff71a6e8af162e7d18a8f35dd2259586/ss_2524d213ff71a6e8af162e7d18a8f35dd2259586.jpg?t=1761735519"/>
+      </div>
+      <div class="project-info">
+        <h3>Infection Free Zone</h3>
+        <p class="role" data-i18n="projects.ifz.role">Unity Programmer @ Jutsu Games</p>
+        <p data-i18n="projects.ifz.desc">
+          Przejmij dowodzenie nad grupą ocalałych. Wybierz HQ, a następnie przeszukaj i zaadaptuj budynki wokół, by stworzyć samowystarczalną osadę. A gdy przyjdzie noc - broń się przed hordami zainfekowanych! Graj w dowolnym mieście na świecie, używając realnych danych geograficznych!
+        </p>
+        <div class="project-actions">
+          <a aria-label="Open Infection Free Zone on Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/1465460/Infection_Free_Zone/" rel="noopener" target="_blank">
+            <i class="fa fa-steam"></i> <span data-i18n="projects.btn.steam">Otwórz na Steam</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-row alt" data-img="L">
+      <div class="project-media">
+        <img alt="Builder Simulator screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1120320/ss_65b9a498082e31c54a61174810f3121e5327882b.jpg?t=1760606034"/>
+      </div>
+      <div class="project-info">
+        <h3>Builder Simulator</h3>
+        <p class="role" data-i18n="projects.bs.role">Junior Unity Programmer @ Live Motion Games S.A.</p>
+        <p data-i18n="projects.bs.desc">
+          Builder Simulator to idealna gra dla osób, chcących zbudować swój własny dom, cegiełka po cegiełce. Na łatwym poziomie gra poprowadzi Cię krok po kroku i pozwoli ci się nauczyć podstawowych mechanik.
+        </p>
+        <div class="project-actions">
+          <a aria-label="Open Builder Simulator on Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/1120320/Builder_Simulator/" rel="noopener" target="_blank">
+            <i class="fa fa-steam"></i> <span data-i18n="projects.btn.steam">Otwórz na Steam</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-row" data-img="L">
+      <div class="project-media">
+        <img alt="Train Station Renovation screenshot" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/914010/ss_968e65f077c94a7082cf1bf5d904ed252fad07d3.jpg?t=1760606809"/>
+      </div>
+      <div class="project-info">
+        <h3>Train Station Renovation</h3>
+        <p class="role" data-i18n="projects.tsr.role">Junior Unity Programmer @ Live Motion Games S.A.</p>
+        <p data-i18n="projects.tsr.desc">
+          Spróbuj własnymi rękami zrobić renowacje opuszczonych dworców i starych pociągów. Przywróć ich dawną chwałę i spraw, by znów zaczęły działać.
+        </p>
+        <div class="project-actions">
+          <a aria-label="Open Train Station Renovation on Steam" class="btn btn-steam" data-btn="steam" href="https://store.steampowered.com/app/914010/Train_Station_Renovation/" rel="noopener" target="_blank">
+            <i class="fa fa-steam"></i> <span data-i18n="projects.btn.steam">Otwórz na Steam</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <header class="section-head mt-36" id="projects-own">
+      <h2 class="heading-lg" data-i18n="projects.own.title">Projekty własne</h2>
+    </header>
+
+    <article class="project-row alt" data-img="L">
+      <div class="project-media">
+        <img alt="King Defenders screenshot" src="assets/img/portfolio/kd/kd.png"/>
+      </div>
+      <div class="project-info">
+        <h3>King Defenders</h3>
+        <p class="role">Unity Multiplayer Developer @ KD Team (PC)</p>
+        <p data-i18n="projects.kd.desc">Asymetryczna rozgrywka: obrońcy vs mutanci. Dwa etapy meczu – przygotowania i walka. Wygrana przez przetrwanie lub eliminację króla.</p>
+      </div>
+    </article>
+
+    <article class="project-row" data-img="L">
+      <div class="project-media">
+        <img alt="Till Death Do Us Part screenshot" src="assets/img/portfolio/tddus/tddus.png"/>
+      </div>
+      <div class="project-info">
+        <h3>Till Death Do Us Part</h3>
+        <p class="role">Unity Developer @ Yokaihatsu Team (PC)</p>
+        <p data-i18n="projects.tddus.desc">Gra jamowa (KrakJam 2024): panna młoda vs teściowa – rywalizacja w rzucie izometrycznym.</p>
+      </div>
+    </article>
+
+    <article class="project-row alt" data-img="L">
+      <div class="project-media">
+        <img alt="Urskog screenshot" src="assets/img/portfolio/Urskog/urskog.png"/>
+      </div>
+      <div class="project-info">
+        <h3>Urskog</h3>
+        <p class="role">Unity Developer @ Randoms Team (PC)</p>
+        <p data-i18n="projects.urskog.desc">Gra jamowa (KrakJam 2023): rozrastanie lasu i równowaga ekosystemu. 10 zakończeń, zmienne poziomy trudności.</p>
+      </div>
+    </article>
+
+    <article class="project-row" data-img="L">
+      <div class="project-media">
+        <img alt="Pancerniak screenshot" src="assets/img/portfolio/Pancerniak/tankman_screen_1.png"/>
+      </div>
+      <div class="project-info">
+        <h3>Pancerniak</h3>
+        <p class="role">Unity Multiplayer Developer @ Pancerniak Team (PC/Web)</p>
+        <p data-i18n="projects.pancerniak.desc">Wieloletni projekt hobbystyczny – matchmaking, migracja hosta, custom edytory, ScriptableObjects.</p>
+      </div>
+    </article>
+
+    <article class="project-row alt" data-img="L">
+      <div class="project-media">
+        <img alt="Asterielle screenshot" src="assets/img/portfolio/Asterielle/update12.jpg"/>
+      </div>
+      <div class="project-info">
+        <h3>Asterielle: Slayer of Dwarves</h3>
+        <p class="role">Godot Developer @ Flying Octopus (PC/Web)</p>
+        <p data-i18n="projects.asterielle.desc">Nauka Godota i GDScript, praca zespołowa i proces review w większym zespole.</p>
+      </div>
+    </article>
+
+    <article class="project-row" data-img="L">
+      <div class="project-media">
+        <img alt="Lyngoo screenshot" src="assets/img/portfolio/Lyngoo/scena_2.gif"/>
+      </div>
+      <div class="project-info">
+        <h3>Lyngoo</h3>
+        <p class="role">Unity Developer (Android/iOS)</p>
+        <p data-i18n="projects.lyngoo.desc">Gra mobilna na Google Play z autorskim systemem dialogów opartym o okno edytora – łatwa produkcja treści.</p>
+      </div>
+    </article>
+
+  </div>
 </section>
+
 <!-- ===== CONTACT ===== -->
 <footer class="footer" id="contact">
-<div class="wrap">
-<header class="section-head">
-<h2 class="heading-lg">Kontakt</h2>
-</header>
-<div class="contact-grid">
-<p><i class="fa fa-envelope"></i> <a href="mailto:qbaglowczyk@gmail.com">qbaglowczyk@gmail.com</a></p>
-<p><i class="fa fa-linkedin"></i> <a href="https://pl.linkedin.com/in/jakub-g%C5%82%C3%B3wczyk" target="_blank">LinkedIn</a></p>
-<p><i class="fa fa-github"></i> <a href="https://github.com/B0ZIA" target="_blank">GitHub</a></p>
-</div>
-<p class="copyright">© <span id="y"></span> Jakub Głowczyk</p>
-</div>
-<script>
-      document.getElementById('y').textContent = new Date().getFullYear();
-      // mobile menu
-      document.querySelector('.nav-toggle')?.addEventListener('click', () => {
-        document.querySelector('.menu')?.classList.toggle('open');
-        document.querySelector('.nav-toggle')?.classList.toggle('open');
+  <div class="wrap">
+    <header class="section-head">
+      <h2 class="heading-lg" data-i18n="contact.title">Kontakt</h2>
+    </header>
+    <div class="contact-grid">
+      <p><i class="fa fa-envelope"></i> <a href="mailto:qbaglowczyk@gmail.com">qbaglowczyk@gmail.com</a></p>
+      <p><i class="fa fa-linkedin"></i> <a href="https://pl.linkedin.com/in/jakub-g%C5%82%C3%B3wczyk" target="_blank">LinkedIn</a></p>
+      <p><i class="fa fa-github"></i> <a href="https://github.com/B0ZIA" target="_blank">GitHub</a></p>
+    </div>
+    <p class="copyright">© <span id="y"></span> Jakub Głowczyk</p>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.menu')?.classList.toggle('open');
+      document.querySelector('.nav-toggle')?.classList.toggle('open');
+    });
+
+    // Reveal-on-scroll
+    const inView = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => inView.observe(el));
+
+    // ====== i18n ======
+    const translations = {
+      pl: {
+        title: "Portfolio – Jakub Głowczyk",
+        "nav.skills": "Umiejętności",
+        "nav.pro": "Projekty zawodowe",
+        "nav.own": "Projekty własne",
+        "nav.contact": "Kontakt",
+        "hero.subtitle": "Game Developer",
+        "hero.intro": "Cześć, jestem Kuba — specjalizuję się w programowaniu gier i narzędzi w Unity, wykorzystując C# od ponad 5 lat. Brałem udział w trzech projektach komercyjnych oraz licznych projektach własnych i zespołowych, skupiając się na architekturze kodu, optymalizacji i tworzeniu rozwiązań gameplayowych.",
+        "hero.cv": "Otwórz CV",
+        "hero.projects": "Zobacz projekty",
+        "skills.title": "Umiejętności",
+        "skills.legend.basic": "Podstawy",
+        "skills.legend.practice": "Praktyka",
+        "skills.legend.advanced": "Zaawansowany",
+        "skills.cs.oop": "OOP / Abstrakcja",
+        "skills.cs.serialization": "Serializacja (JSON)",
+        "skills.cs.state": "State Machine / Behavior Tree",
+        "skills.vcs.title": "VCS i IDE",
+        "skills.tech.title": "Technologie",
+        "projects.pro.title": "Projekty zawodowe",
+        "projects.btn.steam": "Otwórz na Steam",
+        "projects.ifz.role": "Unity Programmer @ Jutsu Games",
+        "projects.ifz.desc": "Przejmij dowodzenie nad grupą ocalałych. Wybierz HQ, a następnie przeszukaj i zaadaptuj budynki wokół, by stworzyć samowystarczalną osadę. A gdy przyjdzie noc - broń się przed hordami zainfekowanych! Graj w dowolnym mieście na świecie, używając realnych danych geograficznych!",
+        "projects.bs.role": "Junior Unity Programmer @ Live Motion Games S.A.",
+        "projects.bs.desc": "Builder Simulator to idealna gra dla osób, chcących zbudować swój własny dom, cegiełka po cegiełce. Na łatwym poziomie gra poprowadzi Cię krok po kroku i pozwoli ci się nauczyć podstawowych mechanik.",
+        "projects.tsr.role": "Junior Unity Programmer @ Live Motion Games S.A.",
+        "projects.tsr.desc": "Spróbuj własnymi rękami zrobić renowacje opuszczonych dworców i starych pociągów. Przywróć ich dawną chwałę i spraw, by znów zaczęły działać.",
+        "projects.own.title": "Projekty własne",
+        "projects.kd.desc": "Asymetryczna rozgrywka: obrońcy vs mutanci. Dwa etapy meczu – przygotowania i walka. Wygrana przez przetrwanie lub eliminację króla.",
+        "projects.tddus.desc": "Gra jamowa (KrakJam 2024): panna młoda vs teściowa – rywalizacja w rzucie izometrycznym.",
+        "projects.urskog.desc": "Gra jamowa (KrakJam 2023): rozrastanie lasu i równowaga ekosystemu. 10 zakończeń, zmienne poziomy trudności.",
+        "projects.pancerniak.desc": "Wieloletni projekt hobbystyczny – matchmaking, migracja hosta, custom edytory, ScriptableObjects.",
+        "projects.asterielle.desc": "Nauka Godota i GDScript, praca zespołowa i proces review w większym zespole.",
+        "projects.lyngoo.desc": "Gra mobilna na Google Play z autorskim systemem dialogów opartym o okno edytora – łatwa produkcja treści.",
+        "contact.title": "Kontakt"
+      },
+      en: {
+        title: "Portfolio – Jakub Głowczyk",
+        "nav.skills": "Skills",
+        "nav.pro": "Professional projects",
+        "nav.own": "Personal projects",
+        "nav.contact": "Contact",
+        "hero.subtitle": "Game Developer",
+        "hero.intro": "Hi, I'm Kuba — I focus on gameplay and tools programming in Unity with over 5 years of C# experience. I've contributed to three commercial games plus numerous personal and team projects, with emphasis on architecture, optimization, and gameplay solutions.",
+        "hero.cv": "Open CV",
+        "hero.projects": "View projects",
+        "skills.title": "Skills",
+        "skills.legend.basic": "Foundations",
+        "skills.legend.practice": "Practical",
+        "skills.legend.advanced": "Advanced",
+        "skills.cs.oop": "OOP / Abstraction",
+        "skills.cs.serialization": "Serialization (JSON)",
+        "skills.cs.state": "State Machine / Behavior Tree",
+        "skills.vcs.title": "VCS & IDE",
+        "skills.tech.title": "Technologies",
+        "projects.pro.title": "Professional projects",
+        "projects.btn.steam": "Open on Steam",
+        "projects.ifz.role": "Unity Programmer @ Jutsu Games",
+        "projects.ifz.desc": "Lead a group of survivors. Choose your HQ, scavenge and adapt buildings around it to build a self-sufficient settlement. At night, defend against hordes of infected! Play in any city worldwide using real geographic data.",
+        "projects.bs.role": "Junior Unity Programmer @ Live Motion Games S.A.",
+        "projects.bs.desc": "A perfect game for anyone who wants to build a house brick by brick. On the easy difficulty, the game guides you step by step and teaches the basics.",
+        "projects.tsr.role": "Junior Unity Programmer @ Live Motion Games S.A.",
+        "projects.tsr.desc": "Restore abandoned stations and old trains with your own hands. Bring back their former glory and make them work again.",
+        "projects.own.title": "Personal projects",
+        "projects.kd.desc": "Asymmetric gameplay: defenders vs mutants. Two phases — preparation and combat. Win by surviving or eliminating the king.",
+        "projects.tddus.desc": "Game jam (KrakJam 2024): bride vs mother-in-law in an isometric duel.",
+        "projects.urskog.desc": "Game jam (KrakJam 2023): grow a forest and balance the ecosystem. 10 endings, variable difficulty.",
+        "projects.pancerniak.desc": "Long-term hobby project — matchmaking, host migration, custom editors, ScriptableObjects.",
+        "projects.asterielle.desc": "Learning Godot & GDScript, teamwork and review processes in a larger team.",
+        "projects.lyngoo.desc": "Mobile game on Google Play with a custom editor-based dialogue system for fast content creation.",
+        "contact.title": "Contact"
+      }
+    };
+
+    const html = document.documentElement;
+    const els = document.querySelectorAll("[data-i18n]");
+    const btnPL = document.getElementById("lang-pl");
+    const btnEN = document.getElementById("lang-en");
+    const pill = document.querySelector(".lang-pill");
+    const switcher = document.querySelector(".lang-switch");
+
+    function applyLangUI(lang){
+      // active buttons
+      const isPL = lang === "pl";
+      btnPL.classList.toggle("is-active", isPL);
+      btnEN.classList.toggle("is-active", !isPL);
+      btnPL.setAttribute("aria-pressed", String(isPL));
+      btnEN.setAttribute("aria-pressed", String(!isPL));
+
+      // Move pill
+      if(pill){
+        pill.style.transform = isPL ? "translateX(0)" : "translateX(100%)";
+      }
+    }
+
+    function setLang(lang){
+      const dict = translations[lang] ?? translations.pl;
+      els.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(dict[key] !== undefined){
+          el.textContent = dict[key];
+        }
       });
-      // simple reveal-on-scroll
-      const inView = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.reveal').forEach(el => inView.observe(el));
-    </script>
+      document.title = dict.title || document.title;
+      html.setAttribute("lang", lang);
+      localStorage.setItem("lang", lang);
+      applyLangUI(lang);
+    }
+
+    // Click handlers
+    switcher?.addEventListener("click", (e)=>{
+      const target = e.target.closest(".lang-btn");
+      if(!target) return;
+      const lang = target.getAttribute("data-lang");
+      setLang(lang);
+    });
+
+    // Init from storage or browser
+    const saved = localStorage.getItem("lang");
+    const initial = saved || ((navigator.language || "pl").startsWith("pl") ? "pl" : "en");
+    setLang(initial);
+  </script>
 </footer>
 </body>
 </html>
