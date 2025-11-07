@@ -404,3 +404,38 @@ a:hover{ text-decoration: underline; }
   /* Slightly larger gap for tap-friendly layout */
   .project-actions{ gap: .9rem; }
 }
+
+
+
+/* =====================
+   MOBILE FIXES (2025-11-07)
+   - Hide hero photo on phones
+   - Turn each project into a card so they don't blend together
+===================== */
+@media (max-width: 640px){
+  /* Hide portrait in hero on phones */
+  .hero-photo{ display:none !important; }
+
+  /* Project "card" look so rows don't merge visually */
+  .project-row,
+  .project-row.alt{
+    background: #fff;
+    border: 1px solid rgba(0,49,83,.10);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    padding: 12px;
+  }
+
+  /* Extra breathing room between cards */
+  .section.section-gray #projects-pro + .project-row,
+  .project-row + .project-row{
+    margin-top: 18px;
+  }
+
+  /* Make sure image corners match the card */
+  .project-media{ border-radius: calc(var(--radius) - 4px); overflow: hidden; }
+
+  /* Ensure headings and text don't stick to edges */
+  .project-info{ padding-inline: 6px; }
+  .project-info h3{ margin-top: .5rem; }
+}
