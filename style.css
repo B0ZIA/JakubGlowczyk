@@ -354,22 +354,6 @@ a:hover{ text-decoration: underline; }
   transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
   letter-spacing: .2px;
 }
-.btn-steam::before{
-  content: "";
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  flex: 0 0 22px;
-  background: #2a475e;
-  display: inline-block;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 0 0 1px rgba(0,0,0,.4);
-  -webkit-mask: none;
-  mask: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 64 64' fill='%23c7d5e0'><path d='M57.8 15.9C55.1 8.4 47.9 3 39.6 3 29.6 3 21.4 11.2 21.4 21.2c0 .6 0 1.2.1 1.8l-9.4 9.4c-5.8-.2-10.6 4.5-10.6 10.3C1.5 48.8 6.7 54 13 54c5.9 0 10.7-4.6 10.9-10.5l9.3-9.3c.6.1 1.2.1 1.8.1 10 0 18.2-8.2 18.2-18.2 0-3 -.7-5.8-2.4-8.1zM13 49.3c-3.8 0-6.9-3.1-6.9-6.9 0-3.8 3.1-6.9 6.9-6.9 1 0 1.9.2 2.8.6l5.2 2.1c1.2 2.7 3.5 4.9 6.2 6.1l-2 5.2c-.5.9-.7 1.9-.7 3 0 3.8-3.1 6.8-6.9 6.8zm26-23.1c-4.8 0-8.7-3.9-8.7-8.7s3.9-8.7 8.7-8.7S47.7 12.7 47.7 17.5 43.8 26.2 39 26.2zm0-13.4c-2.6 0-4.7 2.1-4.7 4.7s2.1 4.7 4.7 4.7 4.7-2.1 4.7-4.7-2.1-4.7-4.7-4.7z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px;
-}
 .btn-steam:hover{
   filter: brightness(1.06);
   transform: translateY(-1px);
