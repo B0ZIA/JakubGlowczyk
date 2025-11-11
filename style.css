@@ -522,7 +522,6 @@ a:hover{ text-decoration: underline; }
   height:100%; display:block; object-fit:cover; object-position:center;
   transition: transform .35s ease, filter .25s ease;
 }
-.cert-card:hover .cert-img, .cert-card:focus-within .cert-img{ transform: scale(1.03); }
 .cert-photo .cert-img{ background: #f5f7f8; }
 .cert-placeholder{ display:flex; align-items:center; justify-content:center; padding: 18px; }
 .cert-placeholder-inner{ display:flex; flex-direction:column; align-items:center; gap:10px; color:#888; }
