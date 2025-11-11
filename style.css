@@ -491,3 +491,54 @@ a:hover{ text-decoration: underline; }
   .menu a{ padding: 10px 2px; font-size: 1.05rem; }
 }
 
+
+/* === Certificates (appended by assistant) === */
+/* Certificates */
+.certificates-grid{
+  display: flex;
+  flex-wrap: wrap;               /* zawijanie na mniejszych ekranach */
+  justify-content: center;       /* centracja linii poziomej (kluczowe) */
+  gap: clamp(12px, 2vw, 18px);
+  align-items: stretch;
+  /* ogranicz szerokość kontenera, aby elementy nie rozciągały się zbytnio */
+  max-width: 1200px;
+  margin: 0 auto;                /* wycentrowanie kontenera względem strony */
+  padding: 0 12px;
+}
+.cert-card{
+  background: linear-gradient(180deg, #ffffff, #fbfdfe);
+  flex: 0 1 500px;               /* preferowana szerokość: 300px, ale może się zmniejszyć */
+  max-width: 560px;              /* ograniczenie maksymalnej szerokości karty */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,49,83,0.06);
+  box-shadow: 0 8px 20px rgba(3,22,34,0.04);
+  min-height: 160px;
+  display:flex;
+}
+.cert-link{ display:block; width:100%; height:100%; }
+.cert-img{
+  width:100%; height:100%; display:block; object-fit:cover; object-position:center;
+  transition: transform .35s ease, filter .25s ease;
+}
+.cert-card:hover .cert-img, .cert-card:focus-within .cert-img{ transform: scale(1.03); }
+.cert-photo .cert-img{ background: #f5f7f8; }
+.cert-placeholder{ display:flex; align-items:center; justify-content:center; padding: 18px; }
+.cert-placeholder-inner{ display:flex; flex-direction:column; align-items:center; gap:10px; color:#888; }
+.cert-placeholder-inner svg{ opacity:.85; }
+.cert-footnote{ margin-top: 12px; text-align:center; font-size:.95rem; }
+
+@media (min-width: 920px){
+  .cert-card{ min-height: 200px; }
+}
+@media (max-width: 920px){
+  .certificates-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .certificates-grid{ grid-template-columns: 1fr; }
+  .cert-card{ min-height: 160px; }
+  .cert-footnote{ font-size: .92rem; padding: 0 6px; }
+}
+.cert-link:focus{ outline: 3px solid rgba(26,188,156,0.18); outline-offset: 4px; border-radius: 8px; }
+.cert-img{ aspect-ratio: 16 / 10; }
